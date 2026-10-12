@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-15T12:45:00-03:00",
+  "title": "Design System: Arruda Bombas · Prospecção",
+  "extensions": {
+    "colorMeta": {
+      "paper": { "role": "neutral", "displayName": "Daylight paper", "canonical": "#f5f5f2", "tonalRamp": ["#252524", "#51514e", "#787873", "#a1a19b", "#c4c4bd", "#deded7", "#eeeeea", "#f9f9f6"] },
+      "surface": { "role": "surface", "displayName": "White surface", "canonical": "#ffffff", "tonalRamp": ["#262626", "#535353", "#7a7a7a", "#a1a1a1", "#c4c4c4", "#dfdfdf", "#efefef", "#ffffff"] },
+      "ink": { "role": "text", "displayName": "Graphite ink", "canonical": "#252b30", "tonalRamp": ["#15191c", "#30383e", "#4d575e", "#6c777e", "#8d979d", "#b3b9bc", "#d8dcdd", "#f3f4f4"] },
+      "muted": { "role": "muted", "displayName": "Muted slate", "canonical": "#656e76", "tonalRamp": ["#1c2227", "#3a454d", "#56626a", "#737e85", "#939ba0", "#b8bdc0", "#d9dcde", "#f2f3f3"] },
+      "red": { "role": "primary", "displayName": "Signal red", "canonical": "#c63c28", "tonalRamp": ["#4c140e", "#782116", "#9d2e20", "#c63c28", "#df6a56", "#ee9d8f", "#f7c9c0", "#fdece8"] },
+      "green": { "role": "success", "displayName": "Evidence green", "canonical": "#227147", "tonalRamp": ["#0d2b1b", "#15452b", "#1d5d3b", "#227147", "#4a966b", "#7eb895", "#b8d9c1", "#eaf5ee"] },
+      "nav": { "role": "navigation", "displayName": "Graphite navigation", "canonical": "#1f292e", "tonalRamp": ["#12191c", "#1f292e", "#35434a", "#536168", "#778389", "#a1aaae", "#cdd2d4", "#f1f3f3"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Authentication display", "purpose": "Large sign-in story headline only." },
+      "headline": { "displayName": "Workspace headline", "purpose": "Primary page titles." },
+      "title": { "displayName": "Section title", "purpose": "Panels, dialogs, and groups." },
+      "body": { "displayName": "Operational body", "purpose": "Forms, records, and support copy." },
+      "label": { "displayName": "Field label", "purpose": "Short input labels and structured metadata." }
+    },
+    "shadows": [
+      { "name": "dialog", "value": "0 20px 70px #17242933", "purpose": "Modal task focus." },
+      { "name": "navigation-drawer", "value": "14px 0 50px #1b292033", "purpose": "Mobile navigation separation." },
+      { "name": "toast", "value": "0 8px 24px #12201824", "purpose": "Transient success or error feedback." }
+    ],
+    "motion": [
+      { "name": "control-transition", "value": "0.16s", "purpose": "Button hover and border state changes." },
+      { "name": "drawer-transition", "value": "0.2s", "purpose": "Mobile navigation open and close." },
+      { "name": "reduced-motion", "value": "none", "purpose": "Removes animation and transitions when requested by the operating system." }
+    ],
+    "breakpoints": [
+      { "name": "wide", "value": "1600px" },
+      { "name": "compact-desktop", "value": "1150px" },
+      { "name": "mobile", "value": "800px" },
+      { "name": "narrow-mobile", "value": "420px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button", "kind": "button", "refersTo": "button-primary", "description": "Use for the single direct action in a task.",
+      "html": "<button class=\"ds-btn-primary\">Buscar na base</button>",
+      "css": ".ds-btn-primary{min-height:42px;padding:10px 16px;border:1px solid #c63c28;border-radius:7px;background:#c63c28;color:#fff;font:600 14px 'Segoe UI',sans-serif;transition:background .16s,border-color .16s}.ds-btn-primary:hover{background:#ad301e;border-color:#ad301e}.ds-btn-primary:focus-visible{outline:3px solid #df745a;outline-offset:3px}"
+    },
+    {
+      "name": "Secondary Button", "kind": "button", "refersTo": "button-secondary", "description": "Use for secondary actions alongside a primary action.",
+      "html": "<button class=\"ds-btn-secondary\">Cadastrar empresa</button>",
+      "css": ".ds-btn-secondary{min-height:42px;padding:10px 16px;border:1px solid #ccd1d3;border-radius:7px;background:#fff;color:#252b30;font:600 14px 'Segoe UI',sans-serif;transition:background .16s,border-color .16s}.ds-btn-secondary:hover{background:#f1f3f2;border-color:#a9b2b6}.ds-btn-secondary:focus-visible{outline:3px solid #df745a;outline-offset:3px}"
+    },
+    {
+      "name": "Text Field", "kind": "input", "refersTo": "field", "description": "Use for company, account, and search input.",
+      "html": "<label class=\"ds-field\">Cidade<input placeholder=\"Todas as cidades\"></label>",
+      "css": ".ds-field{display:flex;flex-direction:column;gap:7px;color:#252b30;font:650 12px 'Segoe UI',sans-serif}.ds-field input{min-height:43px;padding:10px 12px;border:1px solid #cbd1d3;border-radius:7px;background:#fff;color:#252b30;font:14px 'Segoe UI',sans-serif}.ds-field input::placeholder{color:#656e76;opacity:1}.ds-field input:focus{outline:none;border-color:#c63c28;box-shadow:0 0 0 3px #c63c2814}"
+    },
+    {
+      "name": "Active Navigation", "kind": "nav", "refersTo": "navigation", "description": "Use for the selected location in graphite navigation.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-active\" href=\"#\">⌕&nbsp; Encontrar empresas</a></nav>",
+      "css": ".ds-nav{padding:10px;background:#1f292e}.ds-nav-active{display:block;padding:12px 14px;border-radius:7px;background:#37434a;color:#fff;text-decoration:none;font:500 14px 'Segoe UI',sans-serif}.ds-nav-active:focus-visible{outline:3px solid #df745a;outline-offset:3px}"
+    },
+    {
+      "name": "Priority Chip", "kind": "chip", "refersTo": "priority", "description": "Use beside score; always pair letter and number.",
+      "html": "<span class=\"ds-priority\">A</span><strong class=\"ds-score\">85<small>/100</small></strong>",
+      "css": ".ds-priority{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:5px;background:#eaf5ee;color:#227147;font:700 12px 'Segoe UI',sans-serif}.ds-score{margin-left:7px;color:#252b30;font:650 14px 'Segoe UI',sans-serif}.ds-score small{color:#656e76;font-size:10px;font-weight:400}"
+    },
+    {
+      "name": "Workspace Panel", "kind": "card", "refersTo": "panel", "description": "Use for grouped filters and settings without elevation.",
+      "html": "<section class=\"ds-panel\"><h3>Defina o perfil da sua busca</h3><p>Quanto mais específico o perfil, mais focada a prospecção.</p></section>",
+      "css": ".ds-panel{padding:22px 24px;border:1px solid #e1e4e3;border-radius:12px;background:#fff;color:#252b30;font:14px/1.5 'Segoe UI',sans-serif}.ds-panel h3{margin:0 0 12px;font-size:15px;font-weight:650}.ds-panel p{margin:0;color:#656e76;font-size:12px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Commercial workbench",
+    "overview": "This name describes the implemented UI contract; it is not a separately approved brand metaphor. Graphite navigation frames a daylight workspace with compact company records and red actions. The interface is restrained, operational, and written in Brazilian Portuguese.\n\nThis is a scan of `plataforma/public/index.html`, `style.css`, and `app.js`, dated 2026-09-15. No external visual board or approved composition was supplied; reference service access was unavailable. PRODUCT.md supplies the durable product constraints. The interface is prepared for hosting, but no production host or real company provider is established.",
+    "keyCharacteristics": ["Graphite navigation and white bordered work surfaces.", "Compact records showing evidence, potential, and team ownership.", "Explicit empty, error, unknown-data, and connection states.", "Responsive company records and a right-side detail sheet."],
+    "rules": [],
+    "dos": ["Do preserve visible labels, keyboard focus, and full-opacity muted placeholders.", "Do pair status colors with words, letters, or numeric scores.", "Do keep company evidence and unknown information explicit in Brazilian Portuguese.", "Do use existing border, radius, and spacing relationships for new work surfaces."],
+    "donts": ["Don't imply a configured provider or verified company data when unavailable.", "Don't turn ordinary work panels into elevated overlays.", "Don't replace the responsive company records with a clipped desktop table on mobile."]
+  }
+}

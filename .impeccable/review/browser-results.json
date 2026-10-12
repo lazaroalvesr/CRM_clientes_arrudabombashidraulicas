@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "errors": [],
+  "checks": [
+    "setup",
+    "empty state",
+    "company creation",
+    "lead saving",
+    "notes and status",
+    "shared leads",
+    "users view",
+    "mobile navigation",
+    "no page overflow"
+  ],
+  "syntheticData": true
+}
